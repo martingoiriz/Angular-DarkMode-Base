@@ -1,0 +1,32 @@
+@import "./theme/base";
+
+.theme {
+  display: contents;
+}
+
+.container {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  @include themed() {
+    background: t($bg);
+  }
+}
+
+.btn {
+  background: transparent;
+  padding: 1em 2em;
+  font-size: 2em;
+  border: 1px solid limegreen;
+  border-radius: 20px;
+  color: $default-color-text;
+}
+
+.btn {
+  @include themed() {
+    border: 1px solid t($border);
+    color: t($text);
+  }
+}
